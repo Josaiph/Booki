@@ -4,8 +4,8 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" href="CSS/desktop_resolution.css"/>
-        <link rel="stylesheet" media="all and (max-width: 992px)" href="tablette_resolution.css" /> <!-- Pour ceux qui ont une résolution inférieure à 992px -->
-        <link rel="stylesheet" media="all and (max-width: 768px)" href="mobile_resolution.css" /> <!-- Pour tous les mobiles -->
+        <link rel="stylesheet" media="all and (max-width: 992px)" href="CSS/tablette_resolution.css" /> <!-- Pour ceux qui ont une résolution inférieure à 992px -->
+        <link rel="stylesheet" media="all and (max-width: 768px)" href="CSS/mobile_resolution.css" /> <!-- Pour tous les mobiles -->
         <!-- Importation des polices -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,25 @@
         <!-- Fin d'importation des icônes -->
     </head>
     <body>
-
+        <div id="container">
+            <header>
+                <img 
+                id="logo"
+                srcset="Images/logo/Booki.png 191w, Images/logo/Booki@3x.png 285w" 
+                size ="(max-width: 768px) 191px, 285px"
+                alt="logo Booki"/>
+                <nav>
+                    <ul>
+                        <li class="active">
+                            <a href="#" class="active">Hébergements</a>
+                        </li>
+                        <li>
+                            <a href="#">Activités</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
     </body>
     <footer>
         
