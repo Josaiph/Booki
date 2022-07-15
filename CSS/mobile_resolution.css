@@ -48,6 +48,11 @@ nav ul li:hover
 
 main
 {
+    padding: 0 0px;
+}
+
+#header
+{
     padding: 0 30px;
 }
 
@@ -85,4 +90,47 @@ main
 {
     font-size: 16px;
     margin-top: 2px;
+}
+
+#hebergements
+{
+    flex-direction: column-reverse;
+}
+
+#herbegements_populaires
+{
+    flex:1;
+}
+
+#hebergements_ville
+{
+    flex:1;
+    margin: 0;
+    background-color: white;
+}
+
+.grey-block
+{
+    border-radius: 0px;
+}
+
+#grille
+{
+    height : fit-content;
+}
+
+#grille .vignette picture img
+{
+    width: 100%;
+    height: 100px;
+}
+
+.vignette
+{
+    width: 100%;
+}
+
+#hebergements_ville #plus
+{
+    margin-top: 0px;
 }

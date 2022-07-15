@@ -14,3 +14,24 @@
 {
     margin-top:0px;
 }
+
+#grille .vignette picture img
+{
+    width: 200px;
+    height: 100px;
+}
+
+#herbegements_populaires
+{
+    height: fit-content;
+}
+
+#hebergements_ville
+{
+    height:fit-content;
+}
+
+#grille
+{
+    height : 650px;
+}
