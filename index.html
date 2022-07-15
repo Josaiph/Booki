@@ -7,12 +7,10 @@
         <link rel="stylesheet" media="all and (max-width: 992px)" href="CSS/tablette_resolution.css" /> <!-- Pour ceux qui ont une résolution inférieure à 992px -->
         <link rel="stylesheet" media="all and (max-width: 768px)" href="CSS/mobile_resolution.css" /> <!-- Pour tous les mobiles -->
         <!-- Importation des polices -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <style>@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');</style>
         <!-- Fin d'importation des polices -->
         <!-- Importation des icônes -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/b711bdb4d4.js" crossorigin="anonymous"></script>
         <!-- Fin d'importation des icônes -->
     </head>
     <body>
@@ -26,7 +24,7 @@
                 <nav>
                     <ul>
                         <li class="active">
-                            <a href="#" class="active">Hébergements</a>
+                            <a href="#">Hébergements</a>
                         </li>
                         <li>
                             <a href="#">Activités</a>
@@ -34,6 +32,62 @@
                     </ul>
                 </nav>
             </header>
+            <main>
+                <div id="header">
+                    <div id="headlines">
+                        <h1><strong>Trouvez votre hébergement pour des vacances de rêve</strong><br/>
+                        En plein centre-ville ou en pleine nature</h1>
+                    </div>
+                    <form method="post" action="#">
+                        <div class="picto">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div class="recherche">
+                        <div>
+                            <input type="text" name="recherche"  placeholder="Marseille,France" class="champs" />
+                        </div>
+                        <div>
+                            <button type="submit" class="bouton"><i class="fa-solid fa-magnifying-glass"></i><span>Rechercher</span></button>
+                        </div>
+                    </form>
+                    <div id="filtres">
+                        <p>
+                            Filtres
+                        </p>
+                        <ul>
+                            <li>
+                                <div class="picto">
+                                    <i class="fa-solid fa-money-bill-wave"></i>
+                                </div>
+                                <p>Économique</p>
+                            </li>
+                            <li>
+                                <div class="picto">
+                                    <i class="fa-solid fa-child-reaching"></i>
+                                </div>
+                                <p>Familial</p>
+                            </li>
+                            <li>
+                                <div class="picto">
+                                    <i class="fa-solid fa-heart"></i>
+                                </div>
+                                <p>Romantique</p>
+                            </li>
+                            <li>
+                                <div class="picto">
+                                    <i class="fa-solid fa-dog"></i>
+                                </div>
+                                <p>Animaux autorisés</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="resultats">
+                        <div class="picto">
+                            <i class="fa-solid fa-info"></i>
+                        </div>
+                        <p>Plus de 500 logements sont disponibles dans cette ville.</p>
+                    </div>
+                </div>
+            </main>
         </div>
     </body>
     <footer>

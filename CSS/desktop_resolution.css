@@ -12,8 +12,8 @@ body, ul
 #container
 {
     width: 100%;
-    padding: 0 40px;
-    font-family: "roboto", arial, sans serif;
+    padding: 0 55px;
+    font-family: 'Railway', sans-serif;
 }
 
 .blue
@@ -40,7 +40,6 @@ header
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0 10px;
 }
 
 #logo
@@ -59,11 +58,11 @@ nav ul
 
 nav ul li
 {
-    padding: 50px 30px 15px 30px;
+    padding: 55px 30px 15px 30px;
     border-top: 2px solid white;
 }
 
-nav ul li.active
+nav ul li:hover
 {
     border-top: 2px solid #0065FC;
 }
@@ -74,8 +73,201 @@ nav ul li a
     color: black;
 }
 
-nav ul li a.active
+nav ul li a:hover
 {
     color: #0065FC;
 }
 
+/* Recherche */
+
+#header #headlines
+{
+    padding: 30px 0 5px 0;
+}
+
+#header #headlines h1
+{
+    font-size: 17px;
+    font-weight: 100;
+    line-height: 25px;
+}
+
+#header #headlines h1 strong
+{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#header form
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    height:50px;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px;
+    width: fit-content;
+}
+
+#header form .picto
+{
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+    background-color: #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
+    font-size: 18px;
+}
+
+#header form input, #header form button
+{
+    font-size: 18px;
+    font-weight:normal;
+}
+
+#header form button i
+{
+    display:none;
+}
+
+#header form .champs
+{
+    height: 100%;
+    width: 235px;
+    padding-left:20px;
+    border: none;
+}
+
+#header form .champs:focus
+{
+    outline: none;
+}
+
+#header form .champs::placeholder
+{
+    color: black;
+}
+
+#header form .bouton
+{
+    background-color: #0065FC;
+    border : 1px solid #0065FC;
+    border-radius: 0 15px 15px 0;
+    color: white;
+    height: 100%;
+    padding: 0 15px;
+}
+
+#header form .bouton:hover
+{
+    background-color: #0141a0;
+    border : 1px solid #0141a0;
+    cursor: pointer;
+}
+
+/* Filtres */
+
+#filtres
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#filtres p
+{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#filtres ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+#filtres ul li
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    border-radius: 50px;
+    border: 2px solid rgb(189, 189, 189);
+    padding: 0;
+    height: 50px;
+    margin-right: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+#filtres ul li:hover
+{
+    border: 2px solid #e4f0ff;
+    background-color: #e4f0ff;
+}
+
+#filtres ul li:hover p
+{
+    color: #0065FC;
+}
+
+
+#filtres ul li .picto
+{
+    background-color: #e4f0ff;
+    border-radius: 50px;
+    width:50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC;
+    position: relative;
+    left:-2px;
+    font-size: 20px;
+}
+
+#filtres ul li p
+{
+    padding: 0 20px 0 15px ;
+}
+
+/* Résultats */
+
+#resultats
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#resultats .picto
+{
+    border: 1px solid rgb(189, 189, 189);
+    border-radius: 50px;
+    min-width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0065FC;
+    font-size: 12px;
+    margin-right: 10px;
+}
+
+
+#resultats p
+{
+    font-weight: 100;
+    margin: 0px;
+}
