@@ -1,13 +1,12 @@
+#filtres
+{
+    flex-wrap: wrap;
+}
 
 #filtres ul
 {
     padding-left: 0;
-}
-
-
-#filtres ul li
-{
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 #resultats
@@ -15,23 +14,17 @@
     margin-top:0px;
 }
 
-#grille .vignette picture img
+#hebergements
 {
-    width: 200px;
-    height: 100px;
+    flex-direction: column-reverse;
 }
 
-#herbegements_populaires
+#marseille, #populaires
 {
-    height: fit-content;
+    width: 100%;
 }
 
-#hebergements_ville
+#populaires
 {
-    height:fit-content;
-}
-
-#grille
-{
-    height : 650px;
+    margin-bottom: 30px;
 }

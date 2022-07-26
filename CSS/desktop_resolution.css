@@ -4,7 +4,7 @@
     /* box-sizing est appliqué à tous les éléments */
 }
 
-body, ul
+body, ul, h2, p
 {
     margin:0px;
 }
@@ -12,7 +12,6 @@ body, ul
 #container
 {
     width: 100%;
-    padding: 0 55px;
     font-family: 'Railway', sans-serif;
 }
 
@@ -26,9 +25,31 @@ body, ul
     color:#DEEBFF;
 }
 
-.grey
+.grey 
 {
-    color:#F2F2F2;
+    color: rgb(194, 194, 194);
+}
+
+.block-grey
+{
+    background-color: #F2F2F2;
+    border-radius: 20px;
+}
+
+.red
+{
+    background-color: rgb(255, 124, 124);
+}
+
+.border
+{
+    border: 1px solid black;
+}
+
+.block
+{
+    height: 100px;
+    width: 100%;
 }
 
 
@@ -40,6 +61,7 @@ header
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    padding: 0 55px;
 }
 
 #logo
@@ -79,6 +101,11 @@ nav ul li a:hover
 }
 
 /* Recherche */
+
+#header
+{
+    padding: 0 55px;
+}
 
 #header #headlines
 {
@@ -172,8 +199,8 @@ nav ul li a:hover
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
+    align-items: baseline;
+    flex-wrap: no-wrap;
     margin-top: 30px;
 }
 
@@ -181,14 +208,16 @@ nav ul li a:hover
 {
     font-weight: bold;
     font-size: 18px;
+    margin-right: 20px;
 }
 
 #filtres ul
 {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
     flex-wrap: wrap;
+    align-items: center;
+    padding:0;
 }
 
 #filtres ul li
@@ -203,7 +232,7 @@ nav ul li a:hover
     border: 2px solid rgb(189, 189, 189);
     padding: 0;
     height: 50px;
-    margin-right: 20px;
+    margin: 0 20px 20px 0;
     position: relative;
     cursor: pointer;
 }
@@ -248,7 +277,6 @@ nav ul li a:hover
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 20px;
 }
 
 #resultats .picto
@@ -272,39 +300,50 @@ nav ul li a:hover
     margin: 0px;
 }
 
-
-/* main */
-
-.grey-block
-{
-    background-color: #F2F2F2;
-    border-radius: 20px;
-    padding: 40px;
-    margin-top: 40px;
-    height: fit-content;
-}
+/* hebergements */
 
 #hebergements
 {
+    margin-top: 60px;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 55px;
 }
 
-#hebergements h2
+#marseille
 {
-    margin: 0 0 40px 0;
+    width: 65%;
+    padding: 40px;
 }
 
-#grille
+#populaires
+{
+    width: 30%;
+    padding: 40px;
+}
+
+#populaires .titre, #marseille .titre
+{
+    margin-bottom: 40px;
+}
+
+#populaires .titre
 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    height: 450px;
+    align-items: center;
 }
 
-.vignettes
+#populaires .titre p
+{
+    font-size: 20px;
+}
+
+#hebergements .grille
 {
     display: flex;
     flex-direction: row;
@@ -312,136 +351,287 @@ nav ul li a:hover
     justify-content: space-between;
 }
 
-
-#herbegements_populaires .vignettes
+#plus
 {
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;  
 }
 
-
-.vignette
+#plus a
 {
-    width: auto;
-    max-height: fit-content;
+   text-decoration: none;
+   color: black; 
+}
+
+#plus a:hover
+{
+   color: #0065FC;
+}
+
+.fiche
+{
     background-color: white;
     border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
     padding: 5px;
-    margin-bottom: 30px;
-    box-shadow: 0px 0px 10px hsla(0, 0%, 0%, 0.1);
-}
-
-.vignette:hover
-{
+    padding-bottom: 2px;
     cursor: pointer;
-    box-shadow: 0px 0px 20px hsla(0, 0%, 0%, 0.2);
 }
 
-.vignette picture img
+.fiche:hover
 {
-    width: 230px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 20px 20px 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.vignette .infos
+.verticale img
 {
-    padding:10px;
-}
-
-.vignette .infos h3
-{
-    margin: 0;
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.vignette .infos p
-{
-    margin:0;
-    font-size:14px;
-    margin-bottom: 5px;
-}
-
-.vignette .infos .etoiles
-{
-    color: #0065FC;
-    margin-bottom: 0;
-}
-
-.vignette .infos .etoiles .grey
-{
-    color: rgb(213, 213, 213);
-}
-
-
-#herbegements_populaires
-{
-    flex:1;
-    height: 650px;
-}
-
-#hebergements_ville
-{
-    flex:2.3;
-    margin-right: 40px;
-    height: 650px;
-}
-
-#hebergements_ville #plus
-{
-    margin-top: 40px;
-}
-
-#hebergements_ville #plus a
-{
-    color: black;
-    font-weight: bold;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-#header_populaires
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:baseline;
-}
-
-#header_populaires p
-{
-    margin:0;
-}
-
-.allongee
-{
-    display: flex;
-    flex-direction: row;
-    height: 140px;
     width: 100%;
-    margin-bottom: 0;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
 }
 
-.allongee picture img
+.infos
 {
-    border-radius: 20px 0 0 20px;
-    height: 100%;
-    width: 120px;
+    padding: 5px;
 }
 
-.allongee .infos
+.infos h3
+{
+    margin: 0 0 5px 0;
+    font-size: 15px;
+}
+
+.infos .prix
+{
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.infos .etoiles
+{
+    font-size: 12px;
+}
+
+.horizontale
 {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    height: 100%;
 }
 
-.allongee .infos .prix
+.horizontale picture
+{
+    flex: 1;
+    margin-right: 10px;
+}
+
+.horizontale .infos
 {
     flex: 1;
 }
+
+.horizontale img
+{
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 18px 0 0 18px;
+    margin-right: 10px;
+}
+
+.horizontale .infos
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.horizontale .infos .prix
+{
+    flex: 1;
+}
+
+#hebergements .grille .fiche
+{
+    width: 30%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+#hebergements .liste .fiche
+{
+    width: 100%;
+    height: fit-content;
+    max-height: 200px;
+    margin-bottom: 30px;
+}
+
+#hebergements .liste .fiche:last-child
+{
+    margin-bottom: 0;
+}
+
+#activites
+{
+    margin-top: 30px;
+    padding: 0 55px;
+}
+
+#activites .titre
+{
+    margin-bottom: 30px;
+}
+
+#activites #portfolio
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#activites #portfolio .colonne
+{
+    width: 22%;
+}
+
+#colonne2, #colonne4
+{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#colonne2 article, #colonne4 article
+{
+    flex:1;
+}
+
+
+#colonne2 #article1
+{
+   flex:2;
+   margin-bottom: 30px;
+}
+
+#colonne4 #article2
+{
+    flex:0.7;
+    margin-bottom: 30px;
+ }
+
+.colonne .fiche
+{
+    height: 100%;
+}
+
+#portfolio
+{
+    height: 500px;
+}
+
+#portfolio .fiche
+{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#portfolio .fiche picture
+{
+    flex:1;
+}
+
+#portfolio .fiche img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 18px 18px 0 0;
+}
+
+#portfolio .colonne .fiche img
+{
+    height: 440px;
+}
+
+#portfolio .colonne #article1 img
+{
+    height: 240px;
+}
+
+#portfolio .colonne #article1_2 img
+{
+    height: 100px;
+}
+
+#portfolio .colonne #article2 img
+{
+    height: 150px;
+}
+
+#portfolio .colonne #article2_2 img
+{
+    height: 190px;
+}
+
+#portfolio .infos
+{
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    height: 60px;
+}
+
+#portfolio .infos h3
+{
+    margin: 0;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+ /* footer */
+
+ footer
+ {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 60px;
+    background-color: #f2F2F2;
+    padding: 50px 55px;
+ }
+
+ footer div
+ {
+    text-align: left;
+    flex: auto;
+ }
+
+ footer h4
+ {
+    font-size: 18px;
+ }
+
+ footer ul
+ {
+    padding: 0;
+    line-height: 30px;
+ }
+
+ footer ul li
+ {
+    list-style-type: none;
+ }
+
+ footer ul li a
+ {
+    color: black;
+    text-decoration: none;
+ }
+
+ footer ul li a:hover
+ {
+    color: #0065FC;
+ }
