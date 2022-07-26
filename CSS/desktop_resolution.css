@@ -200,7 +200,7 @@ nav ul li a:hover
     flex-direction: row;
     justify-content: flex-start;
     align-items: baseline;
-    flex-wrap: no-wrap;
+    flex-wrap:nowrap;
     margin-top: 30px;
 }
 
